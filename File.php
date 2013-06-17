@@ -278,7 +278,7 @@ class Mage_Catalog_Model_Product_Option_Type_File extends Mage_Catalog_Model_Pro
 
 			$upload = $cdn->save("/". $this->_bucketArtwork . "/" . $prefixS3 . "_" . $fileInfo['name'] , $fileInfo['tmp_name']);
 
-                        if($upload === true) {
+                        if($upload == true) {
 
                             $cdnUrl = $cdn->getUrl($path);
                             $amazonS3 = $cdnUrl .  "/artworks/" . $prefixS3 . "_" . $fileInfo['name'];
